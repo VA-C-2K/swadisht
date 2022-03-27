@@ -57,7 +57,7 @@ const SLink = styled(NavLink)`
     @media only screen and (max-width: 650px) {
         width:4rem;
         height:4rem;
-        margin:1rem 0.5rem 0.3rem 0rem;
+        margin:1rem 0.8rem 0.3rem 0rem;
         transform:scale(0.9);
         border-radius:50%;
     }

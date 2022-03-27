@@ -80,8 +80,8 @@ const Popular = () => {
 const Wrapper = styled.div`
     margin: 1.5rem 0rem -2rem 0rem;
     @media only screen and (max-width: 650px) {
-        margin: 0.7rem -8rem -2rem -1.5rem;
-        padding:-1rem;
+        margin: 0.7rem -9rem -2rem -2rem;
+        padding:1rem;
         h3{
             margin-bottom:1rem;
         }

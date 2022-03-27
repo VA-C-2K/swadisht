@@ -80,8 +80,8 @@ const Veggie = () => {
 const Wrapper = styled.div`
     margin: 2rem 0rem;
      @media only screen and (max-width: 650px) {
-        margin: -1rem -10rem 2rem -2.5rem;
-        padding:-2rem;
+        margin: -1rem -9rem 1.5rem -2.5rem;
+        padding:1.5rem;
         h3{
             margin-bottom:1rem;
         }
