@@ -8,7 +8,8 @@ const Veggie = () => {
   const [veggie, setVeggie] = useState([]);
   const [screenSize ,setScreenSize] =useState(null);
   const [perpg ,setPerpg] =useState(0);
-
+  let num = Math.floor(Math.random() * 12) + 1;
+  console.log(num);
     useEffect(() => {
       getVeggie();
     }, []);
