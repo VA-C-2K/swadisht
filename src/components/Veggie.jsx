@@ -8,9 +8,8 @@ const Veggie = () => {
   const [veggie, setVeggie] = useState([]);
   const [screenSize ,setScreenSize] =useState(null);
   const [perpg ,setPerpg] =useState(0);
-  let num = Math.floor(Math.random() * 12) + 1;
-  console.log(num);
-    useEffect(() => {
+ 
+  useEffect(() => {
       getVeggie();
     }, []);
     
@@ -24,8 +23,7 @@ const Veggie = () => {
             const data = await api.json();
             localStorage.setItem("veggie",JSON.stringify(data.recipes));
             setVeggie(data.recipes);
-            console.log(data.recipes);
-        }
+          }
     }
 
     useEffect(() => {

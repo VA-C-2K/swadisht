@@ -1,9 +1,8 @@
 import {FaPizzaSlice ,FaHamburger} from 'react-icons/fa';
-import {GiNoodles,GiChopsticks,GiChickenOven} from "react-icons/gi";
+import {GiNoodles,GiChopsticks} from "react-icons/gi";
 import styled from "styled-components";
 import { NavLink } from 'react-router-dom';
 import indian from '../img/indian.png';
-import chinese from '../img/chinese.png';
 
 const Category = () => {
   return (

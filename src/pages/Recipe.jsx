@@ -1,6 +1,6 @@
 import React,{useState,useEffect} from 'react';
 import styled from "styled-components";
-import {Link,useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
  
 const Recipe = () => {
