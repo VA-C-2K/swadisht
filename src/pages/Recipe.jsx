@@ -150,7 +150,7 @@ const Button = styled.button`
 const Info = styled.div`
   margin-left:8rem;
   @media only screen and (max-width: 650px) {
-    margin-left:1rem;
+    margin-left:0.5rem;
     }
 `;
 
