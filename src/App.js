@@ -26,7 +26,7 @@ const Logo = styled(Link)`
   font-size:1.7rem;
   font-weight:400;
   font-family: 'Amita', cursive;
-  @media only screen and (max-width: 512px) {
+  @media only screen and (max-width: 650px) {
     font-size:2rem;
     margin-bottom:0.5rem;
     margin-left:0.5rem;
@@ -42,7 +42,7 @@ const Nav = styled.div`
 
   svg{
     font-size:2.7rem;
-    @media only screen and (max-width: 512px) {
+    @media only screen and (max-width: 650px) {
       font-size:3rem;
   }
 `;

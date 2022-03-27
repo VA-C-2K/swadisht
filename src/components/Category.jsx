@@ -36,7 +36,7 @@ const List = styled.div`
     display:flex;
     justify-content:center;
     margin:2rem 0rem;
-    @media only screen and (max-width: 512px) {
+    @media only screen and (max-width: 650px) {
         margin:1.5rem -7rem 1.5rem 0rem;
     }
 `;
@@ -54,7 +54,7 @@ const SLink = styled(NavLink)`
     height:6rem;
     cursor:pointer;
     transform:scale(0.8);
-    @media only screen and (max-width: 512px) {
+    @media only screen and (max-width: 650px) {
         width:4rem;
         height:4rem;
         margin:1rem 0.5rem 0.3rem 0rem;
@@ -65,7 +65,7 @@ const SLink = styled(NavLink)`
     h4{
         color:white;
         font-size:1rem;
-        @media only screen and (max-width: 512px) {
+        @media only screen and (max-width: 650px) {
             font-size:0.75rem;
             padding:1rem;
             margin:-0.8rem 0.1rem;
@@ -74,14 +74,14 @@ const SLink = styled(NavLink)`
     svg{
         color:white;
         font-size:1.8rem;
-        @media only screen and (max-width: 512px) {
+        @media only screen and (max-width: 650px) {
             font-size:1.2rem;
         }
     }
     img{
         height:40%;
         width:50%;
-        @media only screen and (max-width: 512px) {
+        @media only screen and (max-width: 650px) {
             height:30%;
             width:40%;
         }

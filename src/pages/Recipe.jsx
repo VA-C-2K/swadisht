@@ -73,14 +73,14 @@ const DetailWrapper = styled(motion.div)`
     background:linear-gradient(35deg,#494949,#313131);
     color:white;
   }
-  @media only screen and (max-width: 512px) {
+  @media only screen and (max-width: 650px) {
   margin-top:1rem;
   margin-bottom:1rem;
   margin-left:0rem;
   margin-right:-10rem;
   display:block;
   }
-  @media only screen and (max-width: 512px) {
+  @media only screen and (max-width: 650px) {
   img{
     margin-left:-2rem;
     padding-right:0.3rem;
@@ -89,7 +89,7 @@ const DetailWrapper = styled(motion.div)`
     border-radius:1rem;
   }
   }
-  @media only screen and (max-width: 512px) {
+  @media only screen and (max-width: 650px) {
     h2{
       margin-bottom:0rem;
       margin-left:rem;
@@ -113,7 +113,7 @@ const DetailWrapper = styled(motion.div)`
     font-size:1rem;
     line-height:1.4rem;
   }
-  @media only screen and (max-width: 512px) {
+  @media only screen and (max-width: 650px) {
     li{
       font-size:0.8rem;
       line-height:2rem;
@@ -123,7 +123,7 @@ const DetailWrapper = styled(motion.div)`
     font-size:0.8rem;
     line-height:2.5rem;
   }
-  @media only screen and (max-width: 512px) {
+  @media only screen and (max-width: 650px) {
     ul{
       margin-top:1rem;
     }
@@ -143,13 +143,13 @@ const Button = styled.button`
   position:relative;
   display:relative;
   border-radius:0.5rem;
-  @media only screen and (max-width: 512px) {
+  @media only screen and (max-width: 650px) {
   
     }
 `;
 const Info = styled.div`
   margin-left:8rem;
-  @media only screen and (max-width: 512px) {
+  @media only screen and (max-width: 650px) {
     margin-left:-1.5rem;
     }
 `;

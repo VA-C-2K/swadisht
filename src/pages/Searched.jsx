@@ -41,7 +41,7 @@ const Grid = styled(motion.div)`
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));
     grid-gap:5rem;
-    @media only screen and (max-width: 512px) {
+    @media only screen and (max-width: 650px) {
       grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));
       grid-gap:0.5rem;
     }
@@ -59,7 +59,7 @@ const Card = styled.div`
         text-align:center;
         padding:1rem;
     }
-    @media only screen and (max-width: 512px) {
+    @media only screen and (max-width: 650px) {
       img{
         widht:50%;
         border-radius:3rem;

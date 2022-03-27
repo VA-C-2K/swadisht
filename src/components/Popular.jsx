@@ -35,7 +35,7 @@ const Popular = () => {
         return () => window.removeEventListener('resize',handleResize);
     }, []);
     useEffect(() => {
-        if(screenSize < 512){
+        if(screenSize < 650){
             setPerpg(1);
         }
         else{
@@ -79,7 +79,7 @@ const Popular = () => {
 
 const Wrapper = styled.div`
     margin: 1.5rem 0rem -2rem 0rem;
-    @media only screen and (max-width: 512px) {
+    @media only screen and (max-width: 650px) {
         margin: 0.7rem -8rem -2rem -1.5rem;
         padding:-1rem;
         h3{
@@ -92,7 +92,7 @@ const Card = styled.div`
     border-radius:1rem; 
     overflow:hidden;
     position:realtive;
-    @media only screen and (max-width: 512px) {
+    @media only screen and (max-width: 650px) {
         padding:0rem;
     }
     
@@ -103,7 +103,7 @@ const Card = styled.div`
         width:100%;
         height:100%;
         object-fit:cover;
-        @media only screen and (max-width: 512px) {
+        @media only screen and (max-width: 650px) {
             margin-left:0.6rem;
         }
     }
@@ -118,7 +118,7 @@ const Card = styled.div`
         display:flex;
         justify-content:center;
         align-items:center;
-        @media only screen and (max-width: 512px) {
+        @media only screen and (max-width: 650px) {
             margin-top:5px;
             font-weight:600;
             font-size:0.7rem;

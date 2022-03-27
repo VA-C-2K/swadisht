@@ -36,13 +36,14 @@ const Veggie = () => {
       return () => window.removeEventListener('resize',handleResize);
     }, []);
     useEffect(() => {
-      if(screenSize < 512){
+      if(screenSize < 650){
           setPerpg(1);
       }
       else{
           setPerpg(3);
       }
     }, [screenSize])
+    console.log(perpg)
   return (
     <div>
 
@@ -78,9 +79,9 @@ const Veggie = () => {
 
 const Wrapper = styled.div`
     margin: 2rem 0rem;
-     @media only screen and (max-width: 512px) {
+     @media only screen and (max-width: 650px) {
         margin: -1rem -10rem 2rem -2.5rem;
-        padding:-1rem;
+        padding:-2rem;
         h3{
             margin-bottom:1rem;
         }
@@ -91,7 +92,7 @@ const Card = styled.div`
     border-radius:1.5rem; 
     overflow:hidden;
     position:realtive;
-    @media only screen and (max-width: 512px) {
+    @media only screen and (max-width: 650px) {
       padding:0.6rem;
     }
     img{
@@ -101,7 +102,7 @@ const Card = styled.div`
         width:100%;
         height:100%;
         object-fit:cover;
-        @media only screen and (max-width: 512px) {
+        @media only screen and (max-width: 650px) {
           margin-right:0.25rem;
       }
     }
@@ -117,7 +118,7 @@ const Card = styled.div`
         display:flex;
         justify-content:center;
         align-items:center;
-        @media only screen and (max-width: 512px) {
+        @media only screen and (max-width: 650px) {
           margin-top:5px;
           font-weight:600;
           font-size:0.9rem;

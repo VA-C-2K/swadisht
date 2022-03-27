@@ -6,7 +6,6 @@ import { motion } from "framer-motion";
 
 const Search = () => {
     const [input,setInput] = useState('');
-    const [maxFat,setMaxFat] = useState(25);
     const navigate = useNavigate();
     const submitHandler = (e) =>{
         e.preventDefault();
@@ -29,7 +28,7 @@ const Search = () => {
 }
 const FormStyle = styled(motion.form)`
     margin:0.1rem 1rem -1rem -3rem;
-    @media only screen and (max-width: 512px) {
+    @media only screen and (max-width: 650px) {
         margin: -1.5rem -1rem -0.9rem -4rem;
     }
     div{
@@ -37,8 +36,9 @@ const FormStyle = styled(motion.form)`
         align-items:center;
         position:relative;
         display:flex;
-        @media only screen and (max-width: 512px) {
-            width:150%;
+        @media only screen and (max-width: 650px) {
+            width:100%;
+            margin-left:2rem;
         }
         
     }
@@ -53,8 +53,8 @@ const FormStyle = styled(motion.form)`
         border-radius:0.8rem;
         outline:none;
         width:60%;
-        @media only screen and (max-width: 512px) {
-            width:200%;
+        @media only screen and (max-width: 650px) {
+            width:100%;
             margin-left:2rem;
         }
     }
@@ -64,8 +64,8 @@ const FormStyle = styled(motion.form)`
         left:20%;
         transform:translate(100%,-50%);
         color:white;
-        @media only screen and (max-width: 512px) {
-            left:8%;
+        @media only screen and (max-width: 650px) {
+            left:7%;
         }
     }
 `;
