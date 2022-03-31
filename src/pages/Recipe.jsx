@@ -82,8 +82,8 @@ const DetailWrapper = styled(motion.div)`
   }
   @media only screen and (max-width: 650px) {
   img{
-    margin-left:-2rem;
-    padding-right:0.3rem;
+    margin-left:0.8rem;
+    padding-right:-1rem;
     height:250px;
     width:350px;
     border-radius:1rem;
@@ -91,8 +91,8 @@ const DetailWrapper = styled(motion.div)`
   }
   @media only screen and (max-width: 650px) {
     h2{
-      margin-bottom:0rem;
-      margin-left:rem;
+      margin-bottom:1rem;
+      margin-right:10rem;
     }
     }
   h2{
@@ -101,6 +101,11 @@ const DetailWrapper = styled(motion.div)`
   }
     }
   h3{
+    @media only screen and (max-width: 650px) {
+      h3{
+        margin-right:1rem;
+      }
+      }
     font-weight:50;
     margin-top:0.5rem;
     font-size:1rem;
@@ -144,13 +149,14 @@ const Button = styled.button`
   display:relative;
   border-radius:0.5rem;
   @media only screen and (max-width: 650px) {
-  
+    margin:1rem 2.2rem;
     }
 `;
 const Info = styled.div`
   margin-left:8rem;
   @media only screen and (max-width: 650px) {
-    margin-left:0.5rem;
+    margin-left:0.2rem;
+    margin-right:0.2rem;
     }
 `;
 

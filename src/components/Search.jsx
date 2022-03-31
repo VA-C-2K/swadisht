@@ -29,7 +29,7 @@ const Search = () => {
 const FormStyle = styled(motion.form)`
     margin:0.1rem 1rem -1rem -3rem;
     @media only screen and (max-width: 650px) {
-        margin: -1.5rem -1rem -0.9rem -4rem;
+        margin: -1rem -3rem -0.9rem -2rem;
     }
     div{
         justify-content:center;

@@ -46,7 +46,8 @@ const Grid = styled(motion.div)`
     grid-gap:5rem;
     @media only screen and (max-width: 650px) {
         grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));
-        grid-gap:0.5rem;
+        grid-gap:1rem;
+        margin-left:2rem;
       }
 `;
 const Card = styled.div`
