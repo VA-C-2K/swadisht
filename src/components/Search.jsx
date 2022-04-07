@@ -10,7 +10,7 @@ import "react-toastify/dist/ReactToastify.css";
 const Search = () => {
     const [input,setInput] = useState('');
     const navigate = useNavigate();
-    const notify = () => toast.dark("Please enter Recipes");
+    const notify = () => toast.dark("Please Enter Dish-Name!");
   
     const submitHandler = (e) =>{
         e.preventDefault();
@@ -33,7 +33,7 @@ const Search = () => {
     onSubmit={submitHandler}>
         <div>
         <FaSearch/>
-        <input type="text"  placeholder="Recipes.." value={input} onChange={(e)=>setInput(e.target.value)}/>
+        <input type="text"  placeholder="Search Recipes..." value={input} onChange={(e)=>setInput(e.target.value)}/>
         </div>
     </FormStyle>
     <ToastContainer
