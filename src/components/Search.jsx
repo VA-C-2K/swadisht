@@ -3,16 +3,28 @@ import {useState} from 'react';
 import {FaSearch} from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import { motion } from "framer-motion";
+import { toast, ToastContainer } from "react-toastify/dist/index";
+import "react-toastify/dist/ReactToastify.css";
+
 
 const Search = () => {
     const [input,setInput] = useState('');
     const navigate = useNavigate();
+    const notify = () => toast.dark("Please enter Recipes");
+  
     const submitHandler = (e) =>{
         e.preventDefault();
+        if(input===''){
+            notify();
+            return;
+        }
+        else{
         navigate('/searched/'+input);
-        
+        setInput('');
+        }
     };
   return (
+    <>
     <FormStyle 
     animate={{opacity: 1}}
     initial={{opacity: 0}}
@@ -21,9 +33,17 @@ const Search = () => {
     onSubmit={submitHandler}>
         <div>
         <FaSearch/>
-        <input type="text" value={input} onChange={(e)=>setInput(e.target.value)}/>
+        <input type="text"  placeholder="Recipes.." value={input} onChange={(e)=>setInput(e.target.value)}/>
         </div>
     </FormStyle>
+    <ToastContainer
+    position="top-center"
+    autoClose={1500}
+    hideProgressBar={false}
+    newestOnTop={false}
+    closeOnClick
+  />
+    </>
     )
 }
 const FormStyle = styled(motion.form)`

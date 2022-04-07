@@ -1,23 +1,46 @@
-import React,{useState,useEffect} from 'react';
+import React,{useState,useLayoutEffect} from 'react';
 import styled from "styled-components";
 import {Link,useParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
- 
+import { toast, ToastContainer } from "react-toastify/dist/index";
+import "react-toastify/dist/ReactToastify.css";
+import nf from '../img/nf.png'
+
 const Searched = () => {
 
+  const notify = () => toast.error("No Result Found!");
   const [searchedRecipes,setSearchedRecipes] = useState([]);
+  const [recipetotal,setRecipeTotal] = useState('');
   let params = useParams();
   const getSearched = async (name) =>{
     const data = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&query=${name}`);
     const recipes  = await data.json();
+    console.log("Searched",recipes.totalResults);
+    if(recipes.totalResults === 0){
+      setRecipeTotal(0);
+      notify();
+      return;
+    }
+    else{
+      setRecipeTotal(recipes.totalResults);
     setSearchedRecipes(recipes.results);
+    }
     };
 
-    useEffect(() =>{
+    useLayoutEffect(() =>{
       getSearched(params.search);
   },[params.search]);
 
   return (
+    <>
+    <ToastContainer
+    position="top-center"
+    autoClose={1500}
+    hideProgressBar={false}
+    newestOnTop={false}
+    closeOnClick
+  />
+  {recipetotal !== 0 ?(
     <Grid  
     animate={{opacity: 1}}
     initial={{opacity: 0}}
@@ -34,6 +57,12 @@ const Searched = () => {
         )
       })}
     </Grid>
+  ):(
+    <NotFound>
+      <img src={nf} alt="nf" />
+    </NotFound>
+  )}
+    </>
   )
 }
 
@@ -74,6 +103,27 @@ const Card = styled.div`
         padding:0.5rem;
     }
     
+    }
+`;
+const NotFound = styled.div`
+  justify-content:center;
+  align-items:center;
+  position:relative;
+  display:flex;
+  margin-top:10%;
+  @media only screen and (max-width: 650px) {
+    margin-top:20%;
+    margin-left:20%;    
+  }
+    img{
+      height:100%;
+    }
+    @media only screen and (max-width: 650px) {
+      img{
+        
+        height:100%;
+        width:115%;
+      }
     }
 `;
 
