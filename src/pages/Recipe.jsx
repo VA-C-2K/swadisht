@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react';
+import React,{useState,useLayoutEffect} from 'react';
 import styled from "styled-components";
 import { useParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -15,11 +15,11 @@ const Recipe = () => {
     setDetails(detailData);
     };
 
-    useEffect(() =>{
+    useLayoutEffect(() =>{
       fetchDetails();
     },[params.name]);
 
-    useEffect(() => {
+    useLayoutEffect(() => {
       const handleResize = () => setScreenSize(window.innerWidth);
 
       window.addEventListener('resize',handleResize);
@@ -28,7 +28,6 @@ const Recipe = () => {
       return () => window.removeEventListener('resize',handleResize);
   }, []);
 
-  console.log(screenSize)
   return (
     <DetailWrapper
     animate={{opacity: 1}}

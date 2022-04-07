@@ -1,5 +1,5 @@
 import { Splide, SplideSlide } from "@splidejs/react-splide";
-import { useEffect, useState } from "react";
+import { useLayoutEffect, useState } from "react";
 import styled from "styled-components";
 import "@splidejs/splide/dist/css/splide.min.css";
 import { Link } from "react-router-dom";
@@ -10,7 +10,7 @@ const Popular = () => {
     const [perpg ,setPerpg] =useState(0);
    
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         getPopular();
     }, []);
     
@@ -26,7 +26,7 @@ const Popular = () => {
             setPopular(data.recipes);
         }
     }
-    useEffect(() => {
+    useLayoutEffect(() => {
         const handleResize = () => setScreenSize(window.innerWidth);
 
         window.addEventListener('resize',handleResize);
@@ -34,7 +34,7 @@ const Popular = () => {
         handleResize();
         return () => window.removeEventListener('resize',handleResize);
     }, []);
-    useEffect(() => {
+    useLayoutEffect(() => {
         if(screenSize < 650){
             setPerpg(1);
         }

@@ -1,5 +1,5 @@
 import { Splide, SplideSlide } from "@splidejs/react-splide";
-import { useEffect, useState } from "react";
+import { useLayoutEffect, useState } from "react";
 import styled from "styled-components";
 import "@splidejs/splide/dist/css/splide.min.css";
 import { Link } from "react-router-dom";
@@ -9,7 +9,7 @@ const Veggie = () => {
   const [screenSize ,setScreenSize] =useState(null);
   const [perpg ,setPerpg] =useState(0);
  
-  useEffect(() => {
+  useLayoutEffect(() => {
       getVeggie();
     }, []);
     
@@ -26,7 +26,7 @@ const Veggie = () => {
           }
     }
 
-    useEffect(() => {
+    useLayoutEffect(() => {
       const handleResize = () => setScreenSize(window.innerWidth);
 
       window.addEventListener('resize',handleResize);
@@ -34,7 +34,7 @@ const Veggie = () => {
       handleResize();
       return () => window.removeEventListener('resize',handleResize);
     }, []);
-    useEffect(() => {
+    useLayoutEffect(() => {
       if(screenSize < 650){
           setPerpg(1);
       }
@@ -42,7 +42,6 @@ const Veggie = () => {
           setPerpg(3);
       }
     }, [screenSize])
-    console.log(perpg)
   return (
     <div>
 

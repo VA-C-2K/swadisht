@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react';
+import React,{useState,useLayoutEffect} from 'react';
 import styled from "styled-components";
 import { motion } from 'framer-motion';
 import {Link,useParams } from 'react-router-dom';
@@ -14,7 +14,7 @@ const Cuisine = () => {
         setCuisine(recipes.results);
     };
 
-    useEffect(() =>{
+    useLayoutEffect(() =>{
         getCuisine(params.type);
     },[params.type]);
     
